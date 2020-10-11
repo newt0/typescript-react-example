@@ -10,18 +10,21 @@ interface Props {
   i?: number;
   fn?: (bob: string) => string; // function must be arrow function
   person: Person;
+  handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 interface TextNode {
   text: string;
 }
 
-export const TextField: React.FC<Props> = ({}) => {
+export const TextField: React.FC<Props> = ({ handleChange }) => {
   const [count, setCount] = useState<TextNode>({ text: "hello" });
   const inputRef = useRef<HTMLInputElement>(null);
+  const divRef = useRef<HTMLInputElement>(null);
+
   return (
-    <div>
-      <input ref={inputRef}/>
+    <div ref={divRef}>
+      <input ref={inputRef} onChange={handleChange} />
     </div>
   );
 };
