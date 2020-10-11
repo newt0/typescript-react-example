@@ -5,7 +5,10 @@ import TextField from "./TextField";
 const App: React.FC = () => {
   return (
     <div>
-      <TextField text="text"/>
+      <TextField
+        text="text"
+        person={{ firstName: "Hayakawa", lastName: "Aki" }}
+      />
     </div>
   );
 };
