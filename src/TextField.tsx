@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 
 interface Person {
   firstName: string;
@@ -17,11 +17,11 @@ interface TextNode {
 }
 
 export const TextField: React.FC<Props> = ({}) => {
-  const [count, setCount] = useState<TextNode>({text: "hello"});
-
+  const [count, setCount] = useState<TextNode>({ text: "hello" });
+  const inputRef = useRef();
   return (
     <div>
-      <input />
+      <input ref={inputRef}/>
     </div>
   );
 };
