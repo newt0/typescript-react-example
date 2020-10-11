@@ -1,5 +1,9 @@
 import React from "react";
 
+interface Person {
+  firstName: string;
+  lastName: string;
+}
 interface Props {
   text: string;
   ok: boolean;
@@ -8,6 +12,7 @@ interface Props {
   obj: {
     f1: string;
   };
+  person: Person;
 }
 const TextField: React.FC<Props> = () => {
   return (
