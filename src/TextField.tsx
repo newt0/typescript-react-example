@@ -6,12 +6,9 @@ interface Person {
 }
 interface Props {
   text: string;
-  ok: boolean;
-  i: number;
-  fn: (bob: string) => string; // function must be arrow function
-  obj: {
-    f1: string;
-  };
+  ok?: boolean;
+  i?: number;
+  fn?: (bob: string) => string; // function must be arrow function
   person: Person;
 }
 const TextField: React.FC<Props> = () => {
