@@ -18,7 +18,7 @@ interface TextNode {
 
 export const TextField: React.FC<Props> = ({}) => {
   const [count, setCount] = useState<TextNode>({ text: "hello" });
-  const inputRef = useRef();
+  const inputRef = useRef<HTMLInputElement>();
   return (
     <div>
       <input ref={inputRef}/>
