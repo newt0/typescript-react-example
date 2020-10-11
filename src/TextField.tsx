@@ -4,7 +4,7 @@ interface Props {
   text: string;
   ok: boolean;
   i: number;
-  fn: () => (void) // function must be arrow function 
+  fn: (bob:string) => (string) // function must be arrow function 
 }
 const TextField: React.FC<Props> = () => {
   return (
