@@ -11,12 +11,11 @@ interface Props {
   fn?: (bob: string) => string; // function must be arrow function
   person: Person;
 }
-const TextField: React.FC<Props> = () => {
+
+export const TextField: React.FC<Props> = () => {
   return (
     <div>
       <input />
     </div>
   );
 };
-
-export default TextField;
