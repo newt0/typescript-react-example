@@ -1,15 +1,16 @@
 import React, { useReducer } from "react";
 
-type Action = { type: "add"; text: string } | { type: "remove"; idx: number };
+type Actions = { type: "add"; text: string } | { type: "remove"; idx: number };
+// possible action
 
 interface Todo {
   text: string;
   complete: boolean;
 }
 
-type State = Todo[];
+type State = Todo[]; // what we're storing in the state
 
-const TodoReducer = (state: State, action: Action) => {
+const TodoReducer = (state: State, action: Actions) => {
   switch (action.type) {
     case "add":
       return [...state, { text: action.text, complete: false }];
@@ -29,6 +30,7 @@ export const ReducerExample: React.FC = () => {
       <button
         onClick={() => {
           dispatch({ type: "add", text: "..." });
+          // dispatch({ type: "remove", idx: 5 });
         }}
       >
         +
