@@ -12,9 +12,13 @@ interface Props {
   person: Person;
 }
 
+interface TextNode {
+  text: string;
+}
+
 export const TextField: React.FC<Props> = ({}) => {
-  const [count, setCount] = useState<number | null | undefined>(5);
-  setCount(undefined)
+  const [count, setCount] = useState<TextNode>({text: "hello"});
+
   return (
     <div>
       <input />
